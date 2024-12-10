@@ -1,24 +1,17 @@
-<html>
-  <body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx">
-        const app = document.getElementById('app');
-        const names = ['Sarah Davachi', 'Yumiko Morioka', 'Sophie Barker'];
+import { useState } from 'react';
+        
+        
 
         function Header({ title }) {
-            console.log(title);
-
             return <h1>{title ? title : 'Default React Title'}</h1>;
         }
 
         function HomePage() {
-            const [likes, setLikes] = React.useState(0);
+            const names = ['Sarah Davachi', 'Yumiko Morioka', 'Sophie Barker'];
+            const [likes, setLikes] = useState(0);
 
             function handleClick() {
-                console.log('Test');
+                
                 setLikes(likes + 1);
             }
 
@@ -36,8 +29,4 @@
             );
         }
 
-        const root = ReactDOM.createRoot(app);
-        root.render(<HomePage/>);
-    </script>
-  </body>
-</html>
+        
