@@ -6,7 +6,7 @@ import { useState } from 'react';
             return <h1>{title ? title : 'Default React Title'}</h1>;
         }
 
-        function HomePage() {
+        export default function HomePage() {
             const names = ['Sarah Davachi', 'Yumiko Morioka', 'Sophie Barker'];
             const [likes, setLikes] = useState(0);
 
