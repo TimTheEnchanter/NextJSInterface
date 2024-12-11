@@ -1,6 +1,4 @@
-import { useState } from 'react';
-        
-        
+import LikeButton from './like-button';
 
         function Header({ title }) {
             return <h1>{title ? title : 'Default React Title'}</h1>;
@@ -8,13 +6,7 @@ import { useState } from 'react';
 
         export default function HomePage() {
             const names = ['Sarah Davachi', 'Yumiko Morioka', 'Sophie Barker'];
-            const [likes, setLikes] = useState(0);
-
-            function handleClick() {
-                
-                setLikes(likes + 1);
-            }
-
+            
             return (
               <div>
                 {/* Nesting the Header component */}
@@ -24,7 +16,7 @@ import { useState } from 'react';
                       <li key={name}>{name}</li>
                     ))}
                 </ul>
-                <button onClick={handleClick}>Likes ({likes})</button>
+                <LikeButton />
               </div>
             );
         }
